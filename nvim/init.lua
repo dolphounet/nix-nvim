@@ -29,8 +29,6 @@ opt.showmatch = true -- Highlight matching parentheses, etc
 opt.incsearch = true
 opt.hlsearch = false
 
-opt.spell = false
-opt.spelllang = 'en'
 opt.wrap = false
 
 opt.scrolloff = 8
