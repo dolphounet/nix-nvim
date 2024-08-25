@@ -30,6 +30,11 @@ end
 require('lualine').setup {
   globalstatus = true,
   sections = {
+    lualine_b = {
+      'filename',
+      'branch',
+      'diff',
+    },
     lualine_c = {
       -- nvim-navic
       { navic.get_location, cond = navic.is_available },
@@ -41,6 +46,16 @@ require('lualine').setup {
   },
   options = {
     theme = 'auto',
+    component_separators = '|',
+    section_separators = { left = '', right = '' },
+  },
+  tabline = {
+    lualine_a = { 'buffers' },
+    lualine_b = {},
+    lualine_c = {},
+    lualine_x = {},
+    lualine_y = { 'windows' },
+    lualine_z = { 'tabs' },
   },
   -- Example top tabline configuration (this may clash with other plugins)
   -- tabline = {
@@ -73,15 +88,5 @@ require('lualine').setup {
   --   lualine_y = {},
   --   lualine_z = {},
   -- },
-  winbar = {
-    lualine_z = {
-      {
-        'filename',
-        path = 1,
-        file_status = true,
-        newfile_status = true,
-      },
-    },
-  },
-  extensions = { 'fugitive', 'fzf', 'toggleterm', 'quickfix' },
+  extensions = { 'fugitive', 'fzf', 'toggleterm', 'quickfix', 'nvim-tree' },
 }
