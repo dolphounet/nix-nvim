@@ -12,10 +12,16 @@ local diagnostic = vim.diagnostic
 keymap.set('n', 'Y', 'y$', { silent = true, desc = '[Y]ank to end of line' })
 
 -- Buffer list navigation
-keymap.set('n', '[b', vim.cmd.bprevious, { silent = true, desc = 'previous [b]uffer' })
-keymap.set('n', ']b', vim.cmd.bnext, { silent = true, desc = 'next [b]uffer' })
+keymap.set('n', '<Tab>', vim.cmd.bprevious, { silent = true, desc = 'previous [b]uffer' })
+keymap.set('n', '<S-Tab>', vim.cmd.bnext, { silent = true, desc = 'next [b]uffer' })
 keymap.set('n', '[B', vim.cmd.bfirst, { silent = true, desc = 'first [B]uffer' })
 keymap.set('n', ']B', vim.cmd.blast, { silent = true, desc = 'last [B]uffer' })
+
+-- nvim-tree toggling
+vim.keymap.set('n', '<C-n>', '<cmd>NvimTreeToggle<CR>', { silent = false, desc = 'toggle file tree' })
+vim.keymap.set('i', '<C-n>', '<Esc><cmd>NvimTreeToggle<CR>', { silent = false, desc = 'toggle file tree' })
+-- keymap.set('n', '<C-n>', vim.cmd('NvimTreeToggle'), { silent = true, desc = 'toggle file tree' })
+-- keymap.set('n', '<C-n>', vim.cmd('NvimTreeToggle'), { silent = true, desc = 'toggle file tree' })
 
 -- Toggle the quickfix list (only opens if it is populated)
 local function toggle_qf_list()
@@ -179,7 +185,7 @@ local function toggle_spell_check()
   vim.opt.spell = not (vim.opt.spell:get())
 end
 
-keymap.set('n', '<leader>S', toggle_spell_check, { noremap = true, silent = true, desc = 'toggle [S]pell' })
+-- keymap.set('n', '<leader>S', toggle_spell_check, { noremap = true, silent = true, desc = 'toggle [S]pell' })
 
 keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'move [d]own half-page and center' })
 keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'move [u]p half-page and center' })
