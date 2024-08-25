@@ -28,8 +28,18 @@ local function extra_mode_status()
 end
 
 require('lualine').setup {
-  globalstatus = true,
+  options = {
+    globalstatus = true,
+    theme = 'auto',
+    component_separators = '|',
+    section_separators = { left = '', right = '' },
+    refresh = {
+        statusline = 100,
+    }
+  },
+
   sections = {
+    lualine_a = {'mode'},
     lualine_b = {
       'filename',
       'branch',
@@ -44,11 +54,7 @@ require('lualine').setup {
       { extra_mode_status },
     },
   },
-  options = {
-    theme = 'auto',
-    component_separators = '|',
-    section_separators = { left = '', right = '' },
-  },
+
   tabline = {
     lualine_a = { 'buffers' },
     lualine_b = {},
