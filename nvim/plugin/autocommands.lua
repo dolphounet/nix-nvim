@@ -146,3 +146,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
 --     end
 --   end,
 -- })
+api.nvim_create_autocmd({'VimLeave'}, {
+  callback = function()
+    vim.o.guicursor = 'a:ver25-blinkwait700-blinkoff400-blinkon250'
+  end,
+})
