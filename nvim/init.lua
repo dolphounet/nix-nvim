@@ -19,28 +19,38 @@ end
 -- Search down into subfolders
 opt.path = vim.o.path .. '**'
 
+opt.clipboard = "unnamedplus"
+
 opt.number = true
 opt.relativenumber = true
 opt.cursorline = true
 opt.lazyredraw = true
 opt.showmatch = true -- Highlight matching parentheses, etc
 opt.incsearch = true
-opt.hlsearch = true
+opt.hlsearch = false
 
 opt.spell = false
 opt.spelllang = 'en'
+opt.wrap = false
 
+opt.scrolloff = 8
 opt.expandtab = true
-opt.tabstop = 2
-opt.softtabstop = 2
-opt.shiftwidth = 2
+opt.tabstop = 4
+opt.softtabstop = 4
+opt.shiftwidth = 4
+opt.smartindent = true
 opt.foldenable = true
 opt.history = 2000
 opt.nrformats = 'bin,hex' -- 'octal'
 opt.undofile = true
+opt.undodir = os.getenv('HOME') .. '/.vim/undodir'
+opt.swapfile = false
+opt.backup = false
 opt.splitright = true
 opt.splitbelow = true
 opt.cmdheight = 0
+
+opt.updatetime = 50
 
 opt.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
 
