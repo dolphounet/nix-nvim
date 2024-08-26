@@ -97,6 +97,12 @@ with final.pkgs.lib; let
     typescript
     vscode-langservers-extracted
     glsl_analyzer
+    # Formatters and other null-ls things
+    statix
+    alejandra
+    black
+    prettierd
+    checkmake
     # Other dependencies
     ripgrep
     gcc

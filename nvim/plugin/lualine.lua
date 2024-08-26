@@ -4,7 +4,13 @@ end
 vim.g.did_load_lualine_plugin = true
 
 local navic = require('nvim-navic')
-navic.setup {}
+navic.setup {
+    lsp = {
+        auto_attach = false,
+    },
+    click = true,
+    highlight = true,
+}
 
 ---Indicators for special modes,
 ---@return string status
@@ -46,8 +52,11 @@ require('lualine').setup {
       'diff',
     },
     lualine_c = {
-      -- nvim-navic
-      { navic.get_location, cond = navic.is_available },
+        -- nvim-navic
+        {
+            "navic",
+            color_correction = "dynamic",
+        },
     },
     lualine_z = {
       -- (see above)
