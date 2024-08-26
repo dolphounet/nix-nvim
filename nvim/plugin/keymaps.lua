@@ -180,13 +180,6 @@ keymap.set('n', ']h', function()
   }
 end, { noremap = true, silent = true, desc = 'next [h]int diagnostic' })
 
-local function toggle_spell_check()
-  ---@diagnostic disable-next-line: param-type-mismatch
-  vim.opt.spell = not (vim.opt.spell:get())
-end
-
--- keymap.set('n', '<leader>S', toggle_spell_check, { noremap = true, silent = true, desc = 'toggle [S]pell' })
-
 keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'move [d]own half-page and center' })
 keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'move [u]p half-page and center' })
 keymap.set('n', '<C-f>', '<C-f>zz', { desc = 'move DOWN [f]ull-page and center' })
