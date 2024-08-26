@@ -72,6 +72,7 @@ with final.pkgs.lib; let
     nvim-ts-context-commentstring # https://github.com/joosepalviste/nvim-ts-context-commentstring/
     # ^ navigation/editing enhancement plugins
     # Useful utilities
+    undotree
     nvim-unception # Prevent nested neovim sessions | nvim-unception
     # ^ Useful utilities
     # libraries that other plugins depend on

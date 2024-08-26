@@ -20,8 +20,9 @@ keymap.set('n', ']B', vim.cmd.blast, { silent = true, desc = 'last [B]uffer' })
 -- nvim-tree toggling
 vim.keymap.set('n', '<C-n>', '<cmd>NvimTreeToggle<CR>', { silent = false, desc = 'toggle file tree' })
 vim.keymap.set('i', '<C-n>', '<Esc><cmd>NvimTreeToggle<CR>', { silent = false, desc = 'toggle file tree' })
--- keymap.set('n', '<C-n>', vim.cmd('NvimTreeToggle'), { silent = true, desc = 'toggle file tree' })
--- keymap.set('n', '<C-n>', vim.cmd('NvimTreeToggle'), { silent = true, desc = 'toggle file tree' })
+
+-- undotree
+vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
 
 -- Toggle the quickfix list (only opens if it is populated)
 local function toggle_qf_list()
