@@ -9,7 +9,7 @@ end
 --   'shell.nix',
 --   '.git',
 -- }
--- 
+--
 -- vim.lsp.start {
 --   name = 'nil_ls',
 --   cmd = { 'nil' },

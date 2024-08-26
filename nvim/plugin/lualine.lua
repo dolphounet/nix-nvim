@@ -5,11 +5,11 @@ vim.g.did_load_lualine_plugin = true
 
 local navic = require('nvim-navic')
 navic.setup {
-    lsp = {
-        auto_attach = false,
-    },
-    click = true,
-    highlight = true,
+  lsp = {
+    auto_attach = false,
+  },
+  click = true,
+  highlight = true,
 }
 
 ---Indicators for special modes,
@@ -40,23 +40,23 @@ require('lualine').setup {
     component_separators = '|',
     section_separators = { left = '', right = '' },
     refresh = {
-        statusline = 100,
-    }
+      statusline = 100,
+    },
   },
 
   sections = {
-    lualine_a = {'mode'},
+    lualine_a = { 'mode' },
     lualine_b = {
       'filename',
       'branch',
       'diff',
     },
     lualine_c = {
-        -- nvim-navic
-        {
-            "navic",
-            color_correction = "dynamic",
-        },
+      -- nvim-navic
+      {
+        'navic',
+        color_correction = 'dynamic',
+      },
     },
     lualine_z = {
       -- (see above)

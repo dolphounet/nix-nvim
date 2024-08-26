@@ -70,8 +70,8 @@ cmp.setup {
     ['<C-j>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
-      -- expand_or_jumpable(): Jump outside the snippet region
-      -- expand_or_locally_jumpable(): Only jump inside the snippet region
+        -- expand_or_jumpable(): Jump outside the snippet region
+        -- expand_or_locally_jumpable(): Only jump inside the snippet region
       elseif luasnip.expand_or_locally_jumpable() then
         luasnip.expand_or_jump()
       elseif has_words_before() then

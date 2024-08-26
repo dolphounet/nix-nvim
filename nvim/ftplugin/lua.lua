@@ -7,8 +7,6 @@ if vim.fn.executable(lua_ls_cmd) ~= 1 then
   return
 end
 
-
-
 -- local root_files = {
 --   '.luarc.json',
 --   '.luarc.jsonc',
@@ -19,7 +17,6 @@ end
 --   'selene.yml',
 --   '.git',
 -- }
-
 
 -- vim.lsp.start {
 --   name = 'luals',
