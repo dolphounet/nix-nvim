@@ -32,6 +32,7 @@ with final.pkgs.lib; let
     tokyonight-nvim
     nvim-treesitter.withAllGrammars
     nvim-lspconfig
+    none-ls-nvim
     luasnip # snippets | https://github.com/l3mon4d3/luasnip/
     # nvim-cmp (autocompletion) and extensions
     nvim-cmp # https://github.com/hrsh7th/nvim-cmp
