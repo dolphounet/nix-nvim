@@ -90,6 +90,12 @@ with final.pkgs.lib; let
     # language servers, etc.
     lua-language-server
     nil # nix LSP
+    pkgs.llvmPackages_19.clang-unwrapped
+    pyright
+    typescript
+    vscode-langservers-extracted
+    glsl_analyzer
+    # Other dependencies
     ripgrep
     gcc
   ];
