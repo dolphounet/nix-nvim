@@ -75,6 +75,7 @@ with final.pkgs.lib; let
     # Useful utilities
     undotree
     nvim-unception # Prevent nested neovim sessions | nvim-unception
+    nvim-autopairs
     # ^ Useful utilities
     # libraries that other plugins depend on
     sqlite-lua
@@ -91,6 +92,7 @@ with final.pkgs.lib; let
   extraPackages = with pkgs; [
     # language servers, etc.
     lua-language-server
+    jdt-language-server
     nil # nix LSP
     pkgs.llvmPackages_19.clang-unwrapped
     pyright
