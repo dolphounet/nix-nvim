@@ -3,8 +3,10 @@ if vim.g.did_load_lspconfig_plugin then
 end
 vim.g.did_load_lspconfig_plugin = true
 
-local servers = { 'nil_ls', 'lua_ls', 'clangd', 'pyright', 'tsserver', 'jsonls', 'html', 'cssls', 'glsl_analyzer' }
+local servers =
+{ 'nil_ls', 'lua_ls', 'clangd', 'pyright', 'tsserver', 'jsonls', 'html', 'cssls', 'glsl_analyzer', 'jdtls' }
 local navic = require('nvim-navic')
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 for _, lsp in ipairs(servers) do
   require('lspconfig')[lsp].setup {
@@ -13,5 +15,6 @@ for _, lsp in ipairs(servers) do
         navic.attach(client, bufnr)
       end
     end,
+    capabilities = capabilities,
   }
 end
