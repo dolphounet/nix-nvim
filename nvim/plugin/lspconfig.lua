@@ -3,8 +3,7 @@ if vim.g.did_load_lspconfig_plugin then
 end
 vim.g.did_load_lspconfig_plugin = true
 
-local servers =
-{ 'nil_ls', 'lua_ls', 'clangd', 'pyright', 'tsserver', 'jsonls', 'html', 'cssls', 'glsl_analyzer', 'jdtls' }
+local servers = { 'nil_ls', 'lua_ls', 'clangd', 'pyright', 'tsserver', 'jsonls', 'html', 'cssls', 'glsl_analyzer' }
 local navic = require('nvim-navic')
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 

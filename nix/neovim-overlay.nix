@@ -33,6 +33,8 @@ with final.pkgs.lib; let
     nvim-treesitter.withAllGrammars
     nvim-lspconfig
     none-ls-nvim
+    nvim-jdtls
+    nvim-dap
     luasnip # snippets | https://github.com/l3mon4d3/luasnip/
     # nvim-cmp (autocompletion) and extensions
     nvim-cmp # https://github.com/hrsh7th/nvim-cmp
@@ -76,6 +78,7 @@ with final.pkgs.lib; let
     undotree
     nvim-unception # Prevent nested neovim sessions | nvim-unception
     nvim-autopairs
+    vim-wakatime
     # ^ Useful utilities
     # libraries that other plugins depend on
     sqlite-lua
