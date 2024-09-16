@@ -96,6 +96,7 @@ with final.pkgs.lib; let
     # language servers, etc.
     lua-language-server
     jdt-language-server
+    typescript-language-server
     nil # nix LSP
     pkgs.llvmPackages_19.clang-unwrapped
     pyright
