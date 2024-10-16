@@ -35,6 +35,7 @@ with final.pkgs.lib; let
     none-ls-nvim
     nvim-jdtls
     nvim-dap
+    flutter-tools-nvim
     luasnip # snippets | https://github.com/l3mon4d3/luasnip/
     # nvim-cmp (autocompletion) and extensions
     nvim-cmp # https://github.com/hrsh7th/nvim-cmp
