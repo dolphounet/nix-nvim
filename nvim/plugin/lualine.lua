@@ -6,7 +6,7 @@ vim.g.did_load_lualine_plugin = true
 local navic = require('nvim-navic')
 navic.setup {
   lsp = {
-    auto_attach = false,
+    auto_attach = true,
   },
   click = true,
   highlight = true,
