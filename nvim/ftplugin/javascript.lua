@@ -1,11 +1,3 @@
-local cmd = { 'angular-language-server', '--stdio' }
-
-require('lspconfig').angularls.setup {
-  cmd = cmd,
-  on_new_config = function(new_config, new_root_dir)
-    new_config.cmd = cmd
-  end,
-}
 local navic = require('nvim-navic')
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 

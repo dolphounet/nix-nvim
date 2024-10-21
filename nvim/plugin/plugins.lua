@@ -8,4 +8,3 @@ vim.g.did_load_plugins_plugin = true
 
 require('nvim-surround').setup()
 require('ibl').setup()
-require('flutter-tools').setup {}
