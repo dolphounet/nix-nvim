@@ -1,12 +1,16 @@
 vim.bo.comments = ':---,:--'
 
-local lua_ls_cmd = 'lua-language-server'
+local navic = require('nvim-navic')
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
--- Check if lua-language-server is available
-if vim.fn.executable(lua_ls_cmd) ~= 1 then
-  return
-end
-
+require('lspconfig').lua_ls.setup {
+  on_attach = function(client, bufnr)
+    if client.server_capabilities.documentSymbolProvider then
+      navic.attach(client, bufnr)
+    end
+  end,
+  capabilities = capabilities,
+}
 -- local root_files = {
 --   '.luarc.json',
 --   '.luarc.jsonc',
