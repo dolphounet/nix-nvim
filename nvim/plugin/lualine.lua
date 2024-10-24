@@ -42,6 +42,8 @@ require('lualine').setup {
     refresh = {
       statusline = 100,
     },
+    disabled_filetypes = { 'alpha' },
+    ignore_focus = { 'NvimTree' },
   },
 
   sections = {
