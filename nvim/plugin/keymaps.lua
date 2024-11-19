@@ -22,7 +22,7 @@ vim.keymap.set('n', '<C-n>', '<cmd>NvimTreeToggle<CR>', { silent = false, desc =
 vim.keymap.set('i', '<C-n>', '<Esc><cmd>NvimTreeToggle<CR>', { silent = false, desc = 'toggle file tree' })
 
 -- undotree
-vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
+vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle, { silent = false, desc = '[u]ndo tree' })
 
 -- Toggle the quickfix list (only opens if it is populated)
 local function toggle_qf_list()
