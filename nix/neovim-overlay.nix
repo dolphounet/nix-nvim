@@ -31,6 +31,7 @@ with final.pkgs.lib; let
     nvim-tree-lua
     tokyonight-nvim
     nvim-treesitter.withAllGrammars
+    rainbow-delimiters-nvim
     nvim-lspconfig
     none-ls-nvim
     nvim-jdtls

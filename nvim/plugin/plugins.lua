@@ -8,3 +8,4 @@ vim.g.did_load_plugins_plugin = true
 
 require('nvim-surround').setup()
 require('ibl').setup()
+require('rainbow-delimiters.setup').setup()
