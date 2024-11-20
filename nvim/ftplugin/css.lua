@@ -8,4 +8,4 @@ require('lspconfig').cssls.setup {
     end
   end,
   capabilities = capabilities,
-}
+vim.cmd('LspStart')

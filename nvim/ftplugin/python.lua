@@ -9,3 +9,4 @@ require('lspconfig').pyright.setup {
   end,
   capabilities = capabilities,
 }
+vim.cmd('LspStart')

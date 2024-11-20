@@ -9,3 +9,4 @@ require('lspconfig').clangd.setup {
   end,
   capabilities = capabilities,
 }
+vim.cmd('LspStart')

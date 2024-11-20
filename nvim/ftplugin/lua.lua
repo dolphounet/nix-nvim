@@ -11,6 +11,7 @@ require('lspconfig').lua_ls.setup {
   end,
   capabilities = capabilities,
 }
+vim.cmd('LspStart')
 -- local root_files = {
 --   '.luarc.json',
 --   '.luarc.jsonc',

@@ -13,6 +13,7 @@ require('lspconfig').nil_ls.setup {
   end,
   capabilities = capabilities,
 }
+vim.cmd('LspStart')
 -- local root_files = {
 --   'flake.nix',
 --   'default.nix',

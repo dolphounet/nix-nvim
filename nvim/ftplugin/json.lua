@@ -9,3 +9,4 @@ require('lspconfig').jsonls.setup {
   end,
   capabilities = capabilities,
 }
+vim.cmd('LspStart')

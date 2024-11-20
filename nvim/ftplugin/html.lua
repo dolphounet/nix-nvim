@@ -9,3 +9,4 @@ require('lspconfig').html.setup {
   end,
   capabilities = capabilities,
 }
+vim.cmd('LspStart')
