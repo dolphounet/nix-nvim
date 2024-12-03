@@ -35,6 +35,7 @@ with final.pkgs.lib; let
     nvim-lspconfig
     none-ls-nvim
     nvim-jdtls
+    rustaceanvim
     nvim-dap
     flutter-tools-nvim
     luasnip # snippets | https://github.com/l3mon4d3/luasnip/
@@ -101,6 +102,7 @@ with final.pkgs.lib; let
 
   extraPackages = with pkgs; [
     # language servers, etc.
+    rust-analyzer
     lua-language-server
     jdt-language-server
     typescript-language-server
@@ -109,7 +111,7 @@ with final.pkgs.lib; let
     pyright
     typescript
     vscode-langservers-extracted
-    glsl_analyzer
+    omnisharp-roslyn
     # Formatters and other null-ls things
     statix
     alejandra
