@@ -119,6 +119,26 @@
         "type": "github"
       }
     },
+    "language-servers": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1709675937,
+        "narHash": "sha256-LpSNmATGgzyXBnnXsuD6NX4VhnvbHPSCKO5hyNk1mz4=",
+        "ref": "refs/heads/master",
+        "rev": "23ac6ce745daede8c801160bbda7d2114666bd94",
+        "revCount": 13,
+        "type": "git",
+        "url": "https://git.sr.ht/~bwolf/language-servers.nix"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.sr.ht/~bwolf/language-servers.nix"
+      }
+    },
     "luvit-meta": {
       "flake": false,
       "locked": {
@@ -181,11 +201,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1731676054,
-        "narHash": "sha256-OZiZ3m8SCMfh3B6bfGC/Bm4x3qc1m2SVEAlkV6iY7Yg=",
+        "lastModified": 1744932701,
+        "narHash": "sha256-fusHbZCyv126cyArUwwKrLdCkgVAIaa/fQJYFlCEqiU=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "5e4fbfb6b3de1aa2872b76d49fafc942626e2add",
+        "rev": "b024ced1aac25639f8ca8fdfc2f8c4fbd66c48ef",
         "type": "github"
       },
       "original": {
@@ -199,6 +219,7 @@
       "inputs": {
         "flake-utils": "flake-utils",
         "gen-luarc": "gen-luarc",
+        "language-servers": "language-servers",
         "nixpkgs": "nixpkgs_2"
       }
     },

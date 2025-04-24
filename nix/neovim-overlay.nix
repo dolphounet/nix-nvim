@@ -26,6 +26,8 @@ with final.pkgs.lib; let
   #   ...
   # }
   all-plugins = with pkgs.vimPlugins; [
+    lze # Lazy loader
+    lzextras
     # plugins from nixpkgs go in here.
     # https://search.nixos.org/packages?channel=unstable&from=0&size=50&sort=relevance&type=packages&query=vimPlugins
     nvim-tree-lua
@@ -39,18 +41,6 @@ with final.pkgs.lib; let
     nvim-dap
     flutter-tools-nvim
     luasnip # snippets | https://github.com/l3mon4d3/luasnip/
-    # nvim-cmp (autocompletion) and extensions
-    nvim-cmp # https://github.com/hrsh7th/nvim-cmp
-    cmp_luasnip # snippets autocompletion extension for nvim-cmp | https://github.com/saadparwaiz1/cmp_luasnip/
-    lspkind-nvim # vscode-like LSP pictograms | https://github.com/onsails/lspkind.nvim/
-    cmp-nvim-lsp # LSP as completion source | https://github.com/hrsh7th/cmp-nvim-lsp/
-    cmp-nvim-lsp-signature-help # https://github.com/hrsh7th/cmp-nvim-lsp-signature-help/
-    cmp-buffer # current buffer as completion source | https://github.com/hrsh7th/cmp-buffer/
-    cmp-path # file paths as completion source | https://github.com/hrsh7th/cmp-path/
-    cmp-nvim-lua # neovim lua API as completion source | https://github.com/hrsh7th/cmp-nvim-lua/
-    cmp-cmdline # cmp command line suggestions
-    cmp-cmdline-history # cmp command line history suggestions
-    # ^ nvim-cmp extensions
     # git integration plugins
     diffview-nvim # https://github.com/sindrets/diffview.nvim/
     neogit # https://github.com/TimUntersberger/neogit/
@@ -67,7 +57,7 @@ with final.pkgs.lib; let
     lualine-nvim # Status line | https://github.com/nvim-lualine/lualine.nvim/
     nvim-navic # Add LSP location to lualine | https://github.com/SmiteshP/nvim-navic
     statuscol-nvim # Status column | https://github.com/luukvbaal/statuscol.nvim/
-    nvim-treesitter-context # nvim-treesitter-context
+    nvim-treesitter-context
     indent-blankline-nvim
     dashboard-nvim
     alpha-nvim
@@ -102,13 +92,14 @@ with final.pkgs.lib; let
 
   extraPackages = with pkgs; [
     # language servers, etc.
+    inputs.language-servers.packages.angular-language-server
     rust-analyzer
     lua-language-server
     jdt-language-server
     typescript-language-server
     nil # nix LSP
-    pkgs.llvmPackages_19.clang-unwrapped
-    pyright
+    llvmPackages_19.clang-unwrapped
+    basedpyright
     typescript
     vscode-langservers-extracted
     omnisharp-roslyn
@@ -119,8 +110,9 @@ with final.pkgs.lib; let
     prettierd
     checkmake
     # Other dependencies
+    nodejs_23 # For angularls
     ripgrep
-    gcc
+    gcc14Stdenv
   ];
 in {
   # This is the neovim derivation
