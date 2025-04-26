@@ -1,8 +1,3 @@
-if vim.g.did_load_lsps then
-  return
-end
-vim.g.did_load_lsps = true
-
 require('lze').register_handlers(require('lzextras').lsp)
 require('lze').load {
   -- global LSPdefaults (optional)
