@@ -28,6 +28,12 @@ with final.pkgs.lib; let
   all-plugins = with pkgs.vimPlugins; [
     lze # Lazy loader
     lzextras
+    snacks-nvim
+    noice-nvim
+    nui-nvim
+    mini-nvim
+    nvim-notify
+    oil-nvim
     # plugins from nixpkgs go in here.
     # https://search.nixos.org/packages?channel=unstable&from=0&size=50&sort=relevance&type=packages&query=vimPlugins
     nvim-tree-lua
@@ -58,7 +64,7 @@ with final.pkgs.lib; let
     nvim-navic # Add LSP location to lualine | https://github.com/SmiteshP/nvim-navic
     statuscol-nvim # Status column | https://github.com/luukvbaal/statuscol.nvim/
     nvim-treesitter-context
-    indent-blankline-nvim
+    # indent-blankline-nvim
     dashboard-nvim
     alpha-nvim
     # ^ UI
@@ -92,7 +98,7 @@ with final.pkgs.lib; let
 
   extraPackages = with pkgs; [
     # language servers, etc.
-    inputs.language-servers.packages.angular-language-server
+    inputs.language-servers.packages."x86_64-linux".angular-language-server
     rust-analyzer
     lua-language-server
     jdt-language-server
@@ -104,6 +110,7 @@ with final.pkgs.lib; let
     vscode-langservers-extracted
     omnisharp-roslyn
     # Formatters and other null-ls things
+    stylua
     statix
     alejandra
     black
@@ -123,9 +130,9 @@ in {
   };
 
   # This can be symlinked in the devShell's shellHook
-  nvim-luarc-json = final.mk-luarc-json {
-    plugins = all-plugins;
-  };
+  # nvim-luarc-json = final.mk-luarc-json {
+  #   plugins = all-plugins;
+  # };
 
   # You can add as many derivations as you like.
   # Use `ignoreConfigRegexes` to filter out config
