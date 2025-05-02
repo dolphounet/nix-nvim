@@ -3,6 +3,7 @@ local fn = vim.fn
 local opt = vim.o
 local g = vim.g
 
+vim.loader.enable()
 -- <leader> key. Defaults to `\`. Some people prefer space.
 g.mapleader = ' '
 g.maplocalleader = ' '
