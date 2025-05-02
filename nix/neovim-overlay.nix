@@ -65,7 +65,6 @@ with final.pkgs.lib; let
     statuscol-nvim # Status column | https://github.com/luukvbaal/statuscol.nvim/
     nvim-treesitter-context
     # indent-blankline-nvim
-    dashboard-nvim
     alpha-nvim
     # ^ UI
     # language support
