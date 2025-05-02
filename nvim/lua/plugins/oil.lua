@@ -4,6 +4,9 @@ return {
     { '<C-p>', '<CMD>Oil<CR><C-p>',      desc = 'Open Oil' },
     { '<C-p>', '<ESC><CMD>Oil<CR><C-p>', mode = 'i',       desc = 'Open Oil' },
   },
+  cmd = {
+    'Oil',
+  },
   after = function()
     require('oil').setup {
       watch_for_changes = true,
