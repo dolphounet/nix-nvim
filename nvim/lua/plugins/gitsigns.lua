@@ -1,6 +1,6 @@
 return {
   'gitsigns',
-  event = 'UIEnter',
+  event = 'DeferredUIEnter',
   after = function()
     require('gitsigns').setup {
       current_line_blame = true,
