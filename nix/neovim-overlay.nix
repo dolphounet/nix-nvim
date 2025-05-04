@@ -35,9 +35,15 @@ with final.pkgs.lib; let
     oil-nvim
     # plugins from nixpkgs go in here.
     # https://search.nixos.org/packages?channel=unstable&from=0&size=50&sort=relevance&type=packages&query=vimPlugins
-    tokyonight-nvim
+    {
+      plugin = tokyonight-nvim;
+      optional = true;
+    }
     nvim-treesitter.withAllGrammars
-    rainbow-delimiters-nvim
+    {
+      plugin = rainbow-delimiters-nvim;
+      optional = true;
+    }
     nvim-lspconfig
     none-ls-nvim
     nvim-jdtls
@@ -62,14 +68,16 @@ with final.pkgs.lib; let
     # language support
     # ^ language support
     # navigation/editing enhancement plugins
-    vim-unimpaired # predefined ] and [ navigation keymaps | https://github.com/tpope/vim-unimpaired/
     {
       plugin = eyeliner-nvim;
       optional = true;
     } # Highlights unique characters for f/F and t/T motions | https://github.com/jinh0/eyeliner.nvim
     # ^ navigation/editing enhancement plugins
     # Useful utilities
-    undotree
+    {
+      plugin = undotree;
+      optional = true;
+    }
     nvim-unception # Prevent nested neovim sessions | nvim-unception
     vim-wakatime
     # ^ Useful utilities

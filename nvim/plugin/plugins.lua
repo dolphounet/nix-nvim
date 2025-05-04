@@ -2,5 +2,3 @@
 -- even with default configs
 require('lsp')
 require('plugins')
-
-require('rainbow-delimiters.setup').setup()

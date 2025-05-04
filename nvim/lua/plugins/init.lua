@@ -1,12 +1,16 @@
 require('lze').load {
   { import = 'plugins.which-key' },
   { import = 'plugins.snacks' },
+  { import = 'plugins.tokyonight' },
   { import = 'plugins.noice' },
   { import = 'plugins.dashboard' },
   { import = 'plugins.eyeliner' },
+  { import = 'plugins.rainbow' },
   { import = 'plugins.lualine' },
+  { import = 'plugins.undotree' },
   { import = 'plugins.navic' },
   { import = 'plugins.gitsigns' },
   { import = 'plugins.oil' },
   { import = 'plugins.mini' },
 }
+vim.cmd([[colorscheme tokyonight-night]])

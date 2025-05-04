@@ -17,13 +17,6 @@ keymap.set('n', '<Tab>', vim.cmd.bnext, { silent = true, desc = 'next [b]uffer' 
 keymap.set('n', '[B', vim.cmd.bfirst, { silent = true, desc = 'first [B]uffer' })
 keymap.set('n', ']B', vim.cmd.blast, { silent = true, desc = 'last [B]uffer' })
 
--- nvim-tree toggling
-vim.keymap.set('n', '<C-n>', '<cmd>NvimTreeToggle<CR>', { silent = false, desc = 'toggle file tree' })
-vim.keymap.set('i', '<C-n>', '<Esc><cmd>NvimTreeToggle<CR>', { silent = false, desc = 'toggle file tree' })
-
--- undotree
-vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle, { silent = false, desc = '[u]ndo tree' })
-
 -- Toggle the quickfix list (only opens if it is populated)
 local function toggle_qf_list()
   local qf_exists = false
