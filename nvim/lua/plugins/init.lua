@@ -3,6 +3,8 @@ require('lze').load {
   { import = 'plugins.snacks' },
   { import = 'plugins.noice' },
   { import = 'plugins.dashboard' },
+  { import = 'plugins.lualine' },
+  { import = 'plugins.navic' },
   { import = 'plugins.gitsigns' },
   { import = 'plugins.oil' },
   { import = 'plugins.mini' },
