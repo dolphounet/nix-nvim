@@ -32,7 +32,6 @@ with final.pkgs.lib; let
     noice-nvim
     nui-nvim
     mini-nvim
-    nvim-notify
     oil-nvim
     # plugins from nixpkgs go in here.
     # https://search.nixos.org/packages?channel=unstable&from=0&size=50&sort=relevance&type=packages&query=vimPlugins
@@ -64,15 +63,14 @@ with final.pkgs.lib; let
     # ^ language support
     # navigation/editing enhancement plugins
     vim-unimpaired # predefined ] and [ navigation keymaps | https://github.com/tpope/vim-unimpaired/
-    eyeliner-nvim # Highlights unique characters for f/F and t/T motions | https://github.com/jinh0/eyeliner.nvim
-    nvim-surround # https://github.com/kylechui/nvim-surround/
-    nvim-treesitter-textobjects # https://github.com/nvim-treesitter/nvim-treesitter-textobjects/
-    nvim-ts-context-commentstring # https://github.com/joosepalviste/nvim-ts-context-commentstring/
+    {
+      plugin = eyeliner-nvim;
+      optional = true;
+    } # Highlights unique characters for f/F and t/T motions | https://github.com/jinh0/eyeliner.nvim
     # ^ navigation/editing enhancement plugins
     # Useful utilities
     undotree
     nvim-unception # Prevent nested neovim sessions | nvim-unception
-    nvim-autopairs
     vim-wakatime
     # ^ Useful utilities
     # libraries that other plugins depend on

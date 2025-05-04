@@ -3,6 +3,6 @@ if vim.g.did_load_autopairs_plugin then
 end
 vim.g.did_load_autopairs_plugin = true
 
-require('nvim-autopairs').setup {
-  map_c_h = true,
-}
+-- require('nvim-autopairs').setup {
+--   map_c_h = true,
+-- }
