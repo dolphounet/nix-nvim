@@ -8,6 +8,25 @@ vim.loader.enable()
 g.mapleader = ' '
 g.maplocalleader = ' '
 
+-- detect WSL
+local is_wsl = fn.has('wsl') == 1 or (vim.loop.os_uname().release:lower():find('microsoft') ~= nil)
+
+if is_wsl then
+  -- Override clipboard provider to bypass slow autodetection on WSL
+  g.clipboard = {
+    name = 'WinInteropClipboard',
+    copy = {
+      ['+'] = 'clip.exe',
+      ['*'] = 'clip.exe',
+    },
+    paste = {
+
+      ['+'] = 'powershell.exe -c Get-Clipboard -Raw',
+      ['*'] = 'powershell.exe -c Get-Clipboard -Raw',
+    },
+    cache_enabled = false,
+  }
+end
 opt.compatible = false
 
 -- Enable true colour support
