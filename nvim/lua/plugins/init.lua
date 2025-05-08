@@ -3,7 +3,7 @@ require('lze').load {
   { import = 'plugins.snacks' },
   { import = 'plugins.tokyonight' },
   { import = 'plugins.null-ls' },
-
+  { import = 'plugins.git' },
   { import = 'plugins.noice' },
   { import = 'plugins.dashboard' },
   { import = 'plugins.eyeliner' },

@@ -1,6 +1,7 @@
 return {
   'snacks.nvim',
   lazy = false,
+  dep_of = 'neogit',
   after = function()
     require('snacks').setup {
       bigfile = { enabled = true },
