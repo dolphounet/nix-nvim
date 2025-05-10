@@ -14,16 +14,9 @@ local is_wsl = fn.has('wsl') == 1 or (vim.loop.os_uname().release:lower():find('
 if is_wsl then
   -- Override clipboard provider to bypass slow autodetection on WSL
   g.clipboard = {
-    name = 'WinInteropClipboard',
-    copy = {
-      ['+'] = 'clip.exe',
-      ['*'] = 'clip.exe',
-    },
-    paste = {
-
-      ['+'] = 'powershell.exe -c Get-Clipboard -Raw',
-      ['*'] = 'powershell.exe -c Get-Clipboard -Raw',
-    },
+    name = 'WslWin32Yank',
+    copy = { ['+'] = 'win32yank.exe -i --crlf', ['*'] = 'win32yank.exe -i --crlf' },
+    paste = { ['+'] = 'win32yank.exe -o --lf', ['*'] = 'win32yank.exe -o --lf' },
     cache_enabled = false,
   }
 end
