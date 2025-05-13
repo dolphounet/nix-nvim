@@ -44,6 +44,7 @@ with final.pkgs.lib; let
       plugin = rainbow-delimiters-nvim;
       optional = true;
     }
+    todo-comments-nvim
     nvim-lspconfig
     none-ls-nvim
     nvim-jdtls
@@ -87,6 +88,7 @@ with final.pkgs.lib; let
     nvim-web-devicons
     vim-repeat
     friendly-snippets
+    nvim-notify
     # ^ libraries that other plugins depend on
     # bleeding-edge plugins from flake inputs
     # (mkNvimPlugin inputs.wf-nvim "wf.nvim") # (example) keymap hints | https://github.com/Cassin01/wf.nvim
