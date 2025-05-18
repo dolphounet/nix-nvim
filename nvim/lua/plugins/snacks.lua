@@ -16,7 +16,6 @@ return {
   },
   {
     -- Highlights and search for TODO like comments
-    -- TODO: yes
     'todo-comments.nvim',
     dep_of = 'snacks.nvim',
     after = function()
