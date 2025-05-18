@@ -50,6 +50,10 @@ with final.pkgs.lib; let
     nvim-jdtls
     rustaceanvim
     nvim-dap
+    nvim-dap-ui
+    nvim-nio
+    nvim-dap-virtual-text
+    typescript-tools-nvim
     flutter-tools-nvim
     luasnip # snippets | https://github.com/l3mon4d3/luasnip/
     # git integration plugins
@@ -102,7 +106,7 @@ with final.pkgs.lib; let
     rust-analyzer
     lua-language-server
     jdt-language-server
-    typescript-language-server
+    # typescript-language-server
     nil # nix LSP
     llvmPackages_19.clang-unwrapped
     basedpyright
