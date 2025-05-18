@@ -1,8 +1,8 @@
 return {
   'oil.nvim',
   keys = {
-    { '<C-p>', '<CMD>Oil<CR><C-p>',      desc = 'Open Oil' },
-    { '<C-p>', '<ESC><CMD>Oil<CR><C-p>', mode = 'i',       desc = 'Open Oil' },
+    { '<C-n>', '<CMD>Oil<CR><C-p>', desc = 'Open Oil' },
+    { '<C-n>', '<ESC><CMD>Oil<CR><C-p>', mode = 'i', desc = 'Open Oil' },
   },
   cmd = {
     'Oil',

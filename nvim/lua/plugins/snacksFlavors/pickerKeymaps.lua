@@ -19,6 +19,14 @@ local keymaps = {
   },
   {
     'n',
+    '<C-p>',
+    function()
+      snacks.picker.smart()
+    end,
+    { desc = '[f]ind [f]iles' },
+  },
+  {
+    'n',
     '<leader>sp',
     function()
       snacks.picker.grep()
