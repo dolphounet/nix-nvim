@@ -26,7 +26,7 @@ require('lze').load {
   { import = 'lsp.angularls' },
   { import = 'lsp.nil_ls' },
   { import = 'lsp.clangd' },
-  { import = 'lsp.ts_ls' },
+  -- { import = 'lsp.ts_ls' },
   { import = 'lsp.lua_ls' },
   { import = 'lsp.jsonls' },
   { import = 'lsp.cssls' },
