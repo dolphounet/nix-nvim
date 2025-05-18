@@ -6,10 +6,10 @@ return {
   {
     'neogit',
     keys = {
-      { '<leader>co', '<cmd>Neogit commit<CR>', desc = 'neogit [co]mmit' },
-      { '<leader>go', '<cmd>Neogit<CR>',        desc = 'neo[g]it [o]pen' },
+      { '<leader>gc', '<cmd>Neogit commit<CR>', desc = 'neo[g]it commit' },
+      { '<leader>go', '<cmd>Neogit<CR>', desc = 'neo[g]it [o]pen' },
 
-      { '<leader>di', '<cmd>Neogit diff<CR>',   desc = 'neogit [di]ff' },
+      { '<leader>gd', '<cmd>Neogit diff<CR>', desc = 'neo[g]it [d]iff' },
     },
     after = function() end,
     require('neogit').setup {

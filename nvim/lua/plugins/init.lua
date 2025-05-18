@@ -5,6 +5,7 @@ require('lze').load {
   { import = 'plugins.tokyonight' },
   { import = 'plugins.null-ls' },
   { import = 'plugins.git' },
+  { import = 'plugins.nvim-dap' },
   { import = 'plugins.noice' },
   { import = 'plugins.dashboard' },
   { import = 'plugins.eyeliner' },
