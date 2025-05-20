@@ -121,7 +121,7 @@ with final.pkgs.lib; let
     prettierd
     checkmake
     # Other dependencies
-    nodejs_23 # For angularls
+    nodejs_24 # For angularls
     ripgrep
     gcc14Stdenv
   ];
