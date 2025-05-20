@@ -53,6 +53,7 @@ with final.pkgs.lib; let
     nvim-dap-ui
     nvim-nio
     nvim-dap-virtual-text
+    nvim-dap-vscode-js
     blink-cmp
     blink-ripgrep-nvim
     typescript-tools-nvim
@@ -103,6 +104,8 @@ with final.pkgs.lib; let
   ];
 
   extraPackages = with pkgs; [
+    # Debuggers
+    vscode-js-debug
     # language servers, etc.
     inputs.language-servers.packages."x86_64-linux".angular-language-server
     rust-analyzer
