@@ -1,3 +1,28 @@
+-- local function pick_script()
+--   local pilot = require('package-pilot')
+--
+--   local current_dir = vim.fn.getcwd()
+--
+--   local package = pilot.find_package_file { dir = current_dir }
+--
+--   if not package then
+--     vim.notify('No package.json found', vim.log.levels.ERROR)
+--     return require('dap').ABORT
+--   end
+--
+--   local scripts = pilot.get_all_scripts(package)
+--
+--   local label_fn = function(script)
+--     return script
+--   end
+--
+--   local co, ismain = coroutine.running()
+--   local ui = require('dap.ui')
+--   local pick = (co and not ismain) and ui.pick_one or ui.pick_one_sync
+--   local result = pick(scripts, 'Select script', label_fn)
+--   return result or require('dap').ABORT
+-- end
+--
 return {
   {
     'nvim-dap',
@@ -41,7 +66,14 @@ return {
           require('nvim-dap-virtual-text').toggle()
         end,
 
-        desc = 'dap [t]erminate',
+        desc = 'dap [q]uit',
+      },
+      {
+        '<leader>dt',
+        function()
+          require('dapui').toggle()
+        end,
+        desc = 'dapui [t]oggle',
       },
       {
         '<leader>du',
@@ -76,6 +108,103 @@ return {
         text = '▶',
         texthl = 'Debug',
       })
+      require('dapui').setup()
+
+      local dap = require('dap')
+
+      dap.adapters['pwa-node'] = {
+        type = 'server',
+        host = 'localhost',
+        port = '${port}',
+        executable = {
+          command = 'js-debug',
+        },
+      }
+      dap.adapters['pwa-chrome'] = {
+        type = 'server',
+        host = 'localhost',
+        port = '${port}',
+        executable = {
+          command = 'js-debug',
+        },
+      }
+
+      if not dap.adapters['node'] then
+        dap.adapters['node'] = function(cb, config)
+          if config.type == 'node' then
+            config.type = 'pwa-node'
+          end
+          local nativeAdapter = dap.adapters['pwa-node']
+          if type(nativeAdapter) == 'function' then
+            nativeAdapter(cb, config)
+          else
+            cb(nativeAdapter)
+          end
+        end
+      end
+
+      if not dap.adapters['chrome'] then
+        dap.adapters['chrome'] = function(cb, config)
+          if config.type == 'chrome' then
+            config.type = 'pwa-chrome'
+          end
+          local nativeAdapter = dap.adapters['pwa-chrome']
+          if type(nativeAdapter) == 'function' then
+            nativeAdapter(cb, config)
+          else
+            cb(nativeAdapter)
+          end
+        end
+      end
+
+      local js_filetypes = { 'typescript', 'javascript', 'typescriptreact', 'javascriptreact' }
+
+      local vscode = require('dap.ext.vscode')
+      vscode.type_to_filetypes['node'] = js_filetypes
+
+      vscode.type_to_filetypes['pwa-node'] = js_filetypes
+      local current_file = vim.fn.expand('%:t')
+
+      for _, language in ipairs(js_filetypes) do
+        if not dap.configurations[language] then
+          dap.configurations[language] = {
+            {
+              type = 'pwa-node',
+              request = 'launch',
+              name = 'Launch file',
+              program = '${file}',
+              cwd = '${workspaceFolder}',
+            },
+            {
+
+              type = 'pwa-node',
+              request = 'attach',
+              name = 'Attach',
+              processId = require('dap.utils').pick_process,
+              cwd = '${workspaceFolder}',
+            },
+            {
+              name = 'tsx (' .. current_file .. ')',
+              type = 'node',
+              request = 'launch',
+              program = '${file}',
+              runtimeExecutable = 'npx tsx',
+              cwd = '${workspaceFolder}',
+              console = 'integratedTerminal',
+              internalConsoleOptions = 'neverOpen',
+              skipFiles = { '<node_internals>/**', '${workspaceFolder}/node_modules/**' },
+            },
+            -- {
+            --   type = 'node',
+            --   request = 'launch',
+            --   name = 'pick script (npm)',
+            --   runtimeExecutable = 'npm',
+            --   runtimeArgs = { 'run', pick_script },
+            --   cwd = '${workspaceFolder}',
+            -- },
+          }
+        end
+      end
     end,
   },
   {
@@ -85,9 +214,7 @@ return {
   {
     'nvim-dap-ui',
     on_require = { 'dapui' },
-    after = function()
-      require('dapui').setup()
-    end,
+    dep_of = { 'nvim-dap' },
   },
   {
     'nvim-dap-virtual-text',
