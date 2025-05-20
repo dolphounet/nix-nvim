@@ -2,6 +2,7 @@ require('lze').load {
   { import = 'plugins.which-key' },
   { import = 'plugins.snacks' },
   { import = 'plugins.typescript-tools' },
+  { import = 'plugins.completion' },
   { import = 'plugins.tokyonight' },
   { import = 'plugins.null-ls' },
   { import = 'plugins.git' },

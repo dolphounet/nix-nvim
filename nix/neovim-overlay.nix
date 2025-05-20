@@ -53,6 +53,8 @@ with final.pkgs.lib; let
     nvim-dap-ui
     nvim-nio
     nvim-dap-virtual-text
+    blink-cmp
+    blink-ripgrep-nvim
     typescript-tools-nvim
     flutter-tools-nvim
     luasnip # snippets | https://github.com/l3mon4d3/luasnip/
