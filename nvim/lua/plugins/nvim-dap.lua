@@ -118,6 +118,7 @@ return {
         port = '${port}',
         executable = {
           command = 'js-debug',
+          args = { '${port}' },
         },
       }
       dap.adapters['pwa-chrome'] = {
@@ -126,6 +127,7 @@ return {
         port = '${port}',
         executable = {
           command = 'js-debug',
+          args = { '${port}' },
         },
       }
 
