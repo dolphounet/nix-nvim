@@ -1,28 +1,3 @@
--- local function pick_script()
---   local pilot = require('package-pilot')
---
---   local current_dir = vim.fn.getcwd()
---
---   local package = pilot.find_package_file { dir = current_dir }
---
---   if not package then
---     vim.notify('No package.json found', vim.log.levels.ERROR)
---     return require('dap').ABORT
---   end
---
---   local scripts = pilot.get_all_scripts(package)
---
---   local label_fn = function(script)
---     return script
---   end
---
---   local co, ismain = coroutine.running()
---   local ui = require('dap.ui')
---   local pick = (co and not ismain) and ui.pick_one or ui.pick_one_sync
---   local result = pick(scripts, 'Select script', label_fn)
---   return result or require('dap').ABORT
--- end
---
 return {
   {
     'nvim-dap',
@@ -196,14 +171,6 @@ return {
               internalConsoleOptions = 'neverOpen',
               skipFiles = { '<node_internals>/**', '${workspaceFolder}/node_modules/**' },
             },
-            -- {
-            --   type = 'node',
-            --   request = 'launch',
-            --   name = 'pick script (npm)',
-            --   runtimeExecutable = 'npm',
-            --   runtimeArgs = { 'run', pick_script },
-            --   cwd = '${workspaceFolder}',
-            -- },
           }
         end
       end
