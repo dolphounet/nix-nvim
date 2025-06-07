@@ -4,7 +4,6 @@ return {
     dep_of = { 'nvim-dap-ui', 'nvim-dap-virtual-text' },
     on_require = { 'dap' },
     keys = {
-      { '<C-n>', '<CMD>Oil<CR><C-p>', desc = 'Open Oil' },
       {
         '<leader>bp',
         function()

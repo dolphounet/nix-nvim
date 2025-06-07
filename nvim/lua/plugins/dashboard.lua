@@ -27,8 +27,8 @@ return {
 
       dashboard.section.buttons.val = {
         dashboard.button('n', '󰈮    New File', ':ene <BAR> startinsert <CR>'),
-        dashboard.button('p', '    Open Explorer', ':Oil<CR>'),
-        dashboard.button('f', '󰈞    Find Files', ':lua Snacks.picker.smart()<CR>'),
+        dashboard.button('p', '    Open Explorer', ':Oil<CR><C-p>'),
+        dashboard.button('f', '󰈞    Find Files', ':lua Snacks.picker.files()<CR>'),
         dashboard.button('g', '󰥨    Workspace Fuzzy Grep', ':lua Snacks.picker.grep()<CR>'),
         dashboard.button('q', '    Quit Neovim', ':qa<CR>'),
       }
