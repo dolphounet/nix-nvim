@@ -17,5 +17,6 @@ require('lze').load {
   { import = 'plugins.gitsigns' },
   { import = 'plugins.oil' },
   { import = 'plugins.mini' },
+  { import = 'plugins.neominimap' },
 }
 vim.cmd([[colorscheme tokyonight-night]])

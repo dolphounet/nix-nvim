@@ -8,6 +8,10 @@
     language-servers.url = "github:SofusA/angular-language-server-nix";
     language-servers.inputs.nixpkgs.follows = "nixpkgs";
 
+    neominimap = {
+      url = "github:Isrothy/neominimap.nvim";
+      flake = false;
+    };
     # Add bleeding-edge plugins here.
     # They can be updated with `nix flake update` (make sure to commit the generated flake.lock)
     # wf-nvim = {
