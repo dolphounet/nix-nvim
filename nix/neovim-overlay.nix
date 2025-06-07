@@ -98,6 +98,7 @@ with final.pkgs.lib; let
     nvim-notify
     # ^ libraries that other plugins depend on
     # bleeding-edge plugins from flake inputs
+    (mkNvimPlugin inputs.neominimap "neominimap.nvim")
     # (mkNvimPlugin inputs.wf-nvim "wf.nvim") # (example) keymap hints | https://github.com/Cassin01/wf.nvim
     # ^ bleeding-edge plugins from flake inputs
     which-key-nvim
