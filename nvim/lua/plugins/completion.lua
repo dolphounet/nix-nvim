@@ -37,7 +37,7 @@ return {
         },
         sources = {
           min_keyword_length = 2,
-          default = { 'lsp', 'path', 'snippets', 'buffer', 'ripgrep' },
+          default = { 'snippets', 'lsp', 'path', 'buffer', 'ripgrep' },
           providers = {
             path = {
               async = true,

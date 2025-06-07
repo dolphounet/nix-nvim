@@ -13,7 +13,7 @@ local keymaps = {
     'n',
     '<leader>ff',
     function()
-      snacks.picker.smart()
+      snacks.picker.files()
     end,
     { desc = '[f]ind [f]iles' },
   },
@@ -21,7 +21,7 @@ local keymaps = {
     'n',
     '<C-p>',
     function()
-      snacks.picker.smart()
+      snacks.picker.files()
     end,
     { desc = '[f]ind [f]iles' },
   },
