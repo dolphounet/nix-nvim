@@ -9,6 +9,5 @@ return {
     require('mini.comment').setup()
     require('mini.move').setup()
     require('mini.ai').setup()
-    require('mini.pairs').setup()
   end,
 }
