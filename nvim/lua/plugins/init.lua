@@ -18,5 +18,6 @@ require('lze').load {
   { import = 'plugins.oil' },
   { import = 'plugins.mini' },
   { import = 'plugins.neominimap' },
+  { import = 'plugins.autopairs' },
 }
 vim.cmd([[colorscheme tokyonight-night]])
