@@ -8,7 +8,9 @@ local fn = vim.fn
 local keymap = vim.keymap
 local diagnostic = vim.diagnostic
 
--- Yank from current position till end of current line
+keymap.set('i', '<C-BS>', '<C-W>', { silent = true, desc = 'Delete word with ctrl backspace' })
+
+-- Yank from current position till end of current
 keymap.set('n', 'Y', 'y$', { silent = true, desc = '[Y]ank to end of line' })
 
 -- Buffer list navigation
