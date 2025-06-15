@@ -32,4 +32,5 @@ require('lze').load {
   { import = 'lsp.html' },
   { import = 'lsp.basedpyright' },
   { import = 'lsp.omnisharp' },
+  { import = 'lsp.qmlls' },
 }
