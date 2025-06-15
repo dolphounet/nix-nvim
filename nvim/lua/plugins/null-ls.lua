@@ -13,6 +13,7 @@ return {
         null_ls.builtins.formatting.stylua,
         null_ls.builtins.formatting.clang_format,
         null_ls.builtins.formatting.prettierd,
+        null_ls.builtins.formatting.qmlformat,
         null_ls.builtins.diagnostics.checkmake,
       },
       on_attach = function(client, bufnr)

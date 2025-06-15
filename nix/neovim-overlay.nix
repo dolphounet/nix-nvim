@@ -131,6 +131,7 @@ with final.pkgs.lib; let
     nodejs_24 # For angularls
     ripgrep
     gcc14Stdenv
+    kdePackages.qtdeclarative # For qmlls
   ];
 in {
   # This is the neovim derivation
