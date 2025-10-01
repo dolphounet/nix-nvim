@@ -65,24 +65,10 @@ return {
         },
         sources = {
           min_keyword_length = 2,
-          default = { 'snippets', 'lsp', 'path', 'buffer', 'ripgrep' },
+          default = { 'snippets', 'lsp', 'path', 'buffer' },
           providers = {
             path = {
               async = true,
-            },
-            ripgrep = {
-              module = 'blink-ripgrep',
-              name = 'Ripgrep',
-              opts = {
-                prefix_min_len = 3,
-                context_size = 4,
-                max_filesize = '1M',
-                project_root_marker = {
-                  '.git',
-                  'flake.nix',
-                  'uv.lock',
-                },
-              },
             },
           },
         },
@@ -105,9 +91,5 @@ return {
       require('luasnip.loaders.from_snipmate').load()
       require('luasnip.loaders.from_lua').load()
     end,
-  },
-  {
-    'blink-ripgrep.nvim',
-    dep_of = { 'blink.cmp' },
   },
 }

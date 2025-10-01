@@ -56,7 +56,6 @@ with final.pkgs.lib; let
     nvim-dap-virtual-text
     nvim-dap-vscode-js
     blink-cmp
-    blink-ripgrep-nvim
     typescript-tools-nvim
     flutter-tools-nvim
     luasnip # snippets | https://github.com/l3mon4d3/luasnip/
