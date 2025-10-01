@@ -137,6 +137,7 @@ let
     gcc14Stdenv
     kdePackages.qtdeclarative # For qmlls
     nixfmt-rfc-style
+    rustfmt
   ];
 in
 {

@@ -30,6 +30,7 @@ return {
         typescriptreact = { 'prettierd' },
         python = { 'black' },
         nix = { 'nixfmt' },
+        rust = { 'rustfmt' },
       },
     }
   end,
