@@ -4,7 +4,7 @@ require('lze').load {
   { import = 'plugins.typescript-tools' },
   { import = 'plugins.completion' },
   { import = 'plugins.tokyonight' },
-  { import = 'plugins.null-ls' },
+  { import = 'plugins.conform' },
   { import = 'plugins.git' },
   { import = 'plugins.nvim-dap' },
   { import = 'plugins.noice' },
