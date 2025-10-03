@@ -1,6 +1,6 @@
 return {
   'typescript-tools.nvim',
-  ft = { 'typescript' },
+  ft = { 'typescript', 'typescriptreact', 'javascript', 'javascriptreact' },
   after = function()
     require('typescript-tools').setup {
       settings = {
