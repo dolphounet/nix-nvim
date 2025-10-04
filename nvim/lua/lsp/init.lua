@@ -34,4 +34,5 @@ require('lze').load {
   { import = 'lsp.omnisharp' },
   { import = 'lsp.qmlls' },
   { import = 'lsp.tailwindcss' },
+  { import = 'lsp.emmet_language_server' },
 }
