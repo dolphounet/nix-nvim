@@ -33,4 +33,5 @@ require('lze').load {
   { import = 'lsp.basedpyright' },
   { import = 'lsp.omnisharp' },
   { import = 'lsp.qmlls' },
+  { import = 'lsp.tailwindcss' },
 }
