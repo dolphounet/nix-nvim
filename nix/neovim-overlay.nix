@@ -125,6 +125,7 @@ let
     typescript
     vscode-langservers-extracted
     tailwindcss-language-server
+    emmet-language-server
     omnisharp-roslyn
     # Formatters and other null-ls things
     stylua
