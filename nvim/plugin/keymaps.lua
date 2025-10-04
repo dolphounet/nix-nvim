@@ -18,6 +18,7 @@ keymap.set('n', '<S-Tab>', vim.cmd.bprevious, { silent = true, desc = 'previous 
 keymap.set('n', '<Tab>', vim.cmd.bnext, { silent = true, desc = 'next [b]uffer' })
 keymap.set('n', '[B', vim.cmd.bfirst, { silent = true, desc = 'first [B]uffer' })
 keymap.set('n', ']B', vim.cmd.blast, { silent = true, desc = 'last [B]uffer' })
+keymap.set('n', '<leader>x', vim.cmd.bdelete, { desc = 'close the current buffer' })
 
 -- Toggle the quickfix list (only opens if it is populated)
 local function toggle_qf_list()
