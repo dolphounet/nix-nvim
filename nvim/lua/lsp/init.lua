@@ -25,6 +25,7 @@ require('lze').load {
   },
   { import = 'lsp.angularls' },
   { import = 'lsp.nil_ls' },
+  { import = 'lsp.eslint' },
   { import = 'lsp.clangd' },
   { import = 'lsp.lua_ls' },
   { import = 'lsp.jsonls' },
