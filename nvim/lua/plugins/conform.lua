@@ -31,6 +31,7 @@ return {
         python = { 'black' },
         nix = { 'nixfmt' },
         rust = { 'rustfmt' },
+        java = { 'google-java-format' },
       },
     }
   end,

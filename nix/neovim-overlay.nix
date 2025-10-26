@@ -133,6 +133,7 @@ let
     black
     prettierd
     checkmake
+    google-java-format
     # Other dependencies
     nodejs_24 # For angularls
     ripgrep
