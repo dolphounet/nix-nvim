@@ -18,7 +18,7 @@ return {
       format_on_save = function(_)
         local lsp_format_opt = 'never'
         return {
-          timeout_ms = 500,
+          timeout_ms = 1500,
           lsp_format = lsp_format_opt,
         }
       end,
