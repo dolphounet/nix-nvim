@@ -3,7 +3,6 @@ return {
   event = 'DeferredUIEnter',
   after = function()
     require('mini.splitjoin').setup()
-    require('mini.notify').setup()
     require('mini.surround').setup()
     require('mini.icons').setup()
     require('mini.comment').setup()
