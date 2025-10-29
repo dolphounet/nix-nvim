@@ -34,6 +34,7 @@ require('lze').load {
   { import = 'lsp.basedpyright' },
   { import = 'lsp.omnisharp' },
   { import = 'lsp.qmlls' },
+  { import = 'lsp.sqls' },
   { import = 'lsp.tailwindcss' },
   { import = 'lsp.emmet_language_server' },
 }

@@ -32,6 +32,7 @@ return {
         nix = { 'nixfmt' },
         rust = { 'rustfmt' },
         java = { 'google-java-format' },
+        sql = { 'sqlfmt' },
       },
     }
   end,

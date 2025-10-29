@@ -127,6 +127,7 @@ let
     tailwindcss-language-server
     emmet-language-server
     omnisharp-roslyn
+    sqls
     # Formatters and other null-ls things
     stylua
     statix
@@ -134,13 +135,14 @@ let
     prettierd
     checkmake
     google-java-format
+    rustfmt
+    python313Packages.sqlfmt
     # Other dependencies
     nodejs_24 # For angularls
     ripgrep
     gcc14Stdenv
     kdePackages.qtdeclarative # For qmlls
     nixfmt-rfc-style
-    rustfmt
   ];
 in
 {
