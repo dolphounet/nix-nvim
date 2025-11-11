@@ -1,6 +1,4 @@
 return {
   'cssls',
-  lsp = {
-    filetypes = { 'css' },
-  },
+  lsp = {},
 }
