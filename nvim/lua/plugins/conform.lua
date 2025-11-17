@@ -31,6 +31,8 @@ return {
         css = { 'prettierd' },
         scss = { 'prettierd' },
         less = { 'prettierd' },
+        json = { 'prettierd' },
+        jsonc = { 'prettierd' },
         python = { 'black' },
         nix = { 'nixfmt' },
         rust = { 'rustfmt' },
