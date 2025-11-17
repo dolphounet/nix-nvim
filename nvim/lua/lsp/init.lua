@@ -37,4 +37,5 @@ require('lze').load {
   { import = 'lsp.sqls' },
   { import = 'lsp.tailwindcss' },
   { import = 'lsp.emmet_language_server' },
+  { import = 'lsp.vtsls' },
 }

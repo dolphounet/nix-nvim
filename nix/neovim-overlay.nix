@@ -128,6 +128,7 @@ let
     emmet-language-server
     omnisharp-roslyn
     sqls
+    vtsls
     # Formatters and other null-ls things
     stylua
     statix
