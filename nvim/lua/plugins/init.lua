@@ -19,5 +19,6 @@ require('lze').load {
   { import = 'plugins.mini' },
   { import = 'plugins.neominimap' },
   { import = 'plugins.autopairs' },
+  { import = 'plugins.leetcode' },
 }
 vim.cmd([[colorscheme tokyonight-night]])
