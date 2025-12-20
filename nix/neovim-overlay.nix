@@ -146,6 +146,9 @@ let
     kdePackages.qtdeclarative # For qmlls
     nixfmt-rfc-style
     # rustc # Needed for leetcode with rust
+    (rust-bin.stable.latest.minimal.override {
+      extensions = [ "rust-src" ];
+    })
   ];
 in
 {

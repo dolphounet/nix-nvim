@@ -7,6 +7,10 @@
     gen-luarc.url = "github:mrcjkb/nix-gen-luarc-json";
     language-servers.url = "github:SofusA/angular-language-server-nix";
     language-servers.inputs.nixpkgs.follows = "nixpkgs";
+    rust-overlay = {
+      url = "github:oxalica/rust-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     neominimap = {
       url = "github:Isrothy/neominimap.nvim";
@@ -26,6 +30,7 @@
       nixpkgs,
       flake-utils,
       gen-luarc,
+      rust-overlay,
       ...
     }:
     let
@@ -45,6 +50,7 @@
         pkgs = import nixpkgs {
           inherit system;
           overlays = [
+            rust-overlay.overlays.default
             # Import the overlay, so that the final Neovim derivation(s) can be accessed via pkgs.<nvim-pkg>
             neovim-overlay
             # This adds a function can be used to generate a .luarc.json

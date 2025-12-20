@@ -27,7 +27,7 @@ return {
                 local rs_files = vim.fn.globpath(target_dir, '*.rs', false, true)
                 for _, f in ipairs(rs_files) do
                   local file_path = f
-                  crates = crates .. next .. '{"root_module": "' .. file_path .. '","edition": "2021","deps": []}'
+                  crates = crates .. next .. '{"root_module": "' .. file_path .. '","edition": "2024","deps": []}'
                   next = ','
                 end
 
@@ -39,7 +39,15 @@ return {
                 local sysroot_src = vim.fn.system('rustc --print sysroot'):gsub('\n', '')
                   .. '/lib/rustlib/src/rust/library'
 
-                local json_content = '{"sysroot_src": "' .. sysroot_src .. '", "crates": [' .. crates .. ']}'
+                local sysroot = vim.fn.system('rustc --print sysroot'):gsub('\n', '')
+
+                local json_content = '{"sysroot": "'
+                  .. sysroot
+                  .. '", "sysroot_src": "'
+                  .. sysroot_src
+                  .. '", "crates": ['
+                  .. crates
+                  .. ']}'
 
                 local file = io.open(output_file, 'w')
                 if file then
