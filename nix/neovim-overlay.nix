@@ -145,6 +145,7 @@ let
     gcc14Stdenv
     kdePackages.qtdeclarative # For qmlls
     nixfmt-rfc-style
+    # rustc # Needed for leetcode with rust
   ];
 in
 {
