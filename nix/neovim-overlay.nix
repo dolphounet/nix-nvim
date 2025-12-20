@@ -115,7 +115,7 @@ let
     # Debuggers
     vscode-js-debug
     # language servers, etc.
-    inputs.language-servers.packages."x86_64-linux".angular-language-server
+    angular-language-server
     rust-analyzer
     lua-language-server
     jdt-language-server
