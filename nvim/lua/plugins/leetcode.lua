@@ -53,19 +53,6 @@ return {
                 if file then
                   file:write(json_content)
                   file:close()
-
-                  local clients = vim.lsp.get_clients()
-                  local rust_analyzer_attached = false
-                  for _, client in ipairs(clients) do
-                    if client.name == 'rust_analyzer' then
-                      rust_analyzer_attached = true
-                      break
-                    end
-                  end
-
-                  if rust_analyzer_attached then
-                    vim.cmd('LspRestart rust_analyzer')
-                  end
                 else
                   print('Failed to open file: ' .. output_file)
                 end
